@@ -171,6 +171,7 @@ class Autocomplete extends Component {
       placeholderColor,
       data,
       disableFullscreenUI,
+      autoCapitalize,
       ...dropdownProps
     } = this.props;
 
@@ -191,6 +192,7 @@ class Autocomplete extends Component {
             autoCorrect={autoCorrect}
             keyboardType={keyboardType}
             onChangeText={text => this.handleInputChange(text)}
+            autoCapitalize={autoCapitalize}
             onFocus={event => {
               if (scrollToInput) {
                 scrollToInput(findNodeHandle(event.target));
