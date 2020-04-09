@@ -31,6 +31,7 @@ type AutocompleteProps = {
     rightContentStyle?: StyleProp<ViewStyle>;
     rightContentItemStyle?: StyleProp<TextStyle>;
     listHeaderTextStyle?: StyleProp<TextStyle>;
+    listItemTextStyle?: StyleProp<TextStyle>;
     overlayStyle?: StyleProp<TextStyle>;
     pickerStyle?: StyleProp<TextStyle>;
     containerStyle?: StyleProp<ViewStyle>;
