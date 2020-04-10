@@ -124,7 +124,7 @@ class Autocomplete extends Component {
     if (resetOnSelect) {
       this.setState({inputValue: ""});
     } else {
-      const capitalizedValue = capitalizeFirstLetter(valueExtractor(value));
+      const capitalizedValue = this.props.firstLetterCapital === true ? capitalizeFirstLetter(valueExtractor(value)) : valueExtractor(value);
       this.setState({inputValue: capitalizedValue});
     }
   }
@@ -232,6 +232,7 @@ Autocomplete.defaultProps = {
   highlightText: true,
   waitInterval: WAIT_INTERVAL,
   resetOnSelect: false,
+  firstLetterCapital: true,
 };
 
 Autocomplete.propTypes = {
@@ -247,6 +248,7 @@ Autocomplete.propTypes = {
   autoCorrect: bool,
   keyboardType: string,
   resetOnSelect: bool,
+  firstLetterCapital: bool,
 
   valueExtractor: func,
   renderIcon: func,
